@@ -1,0 +1,56 @@
+.bottom-border {
+  border-bottom: 1px solid black;
+  width: 15%;
+}
+.go-back {
+  z-index: -99;
+}
+.go-forth {
+  z-index: 99;
+}
+.transparent {
+  background-color: transparent;
+}
+.rounded-frame {
+  max-width: 50%;
+  border: 1px solid rgb(11, 80, 230);
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centered-image {
+  width: 50%;
+  height: auto;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+.box {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.1rem 0;
+  width: 15rem;
+  height: 15rem;
+}
+
+.experience-card {
+  border-left: 1px solid rgb(129, 129, 129);
+  padding-left: 3rem;
+}
+
+.bulletin {
+  background-color: rgb(129, 129, 129);
+  z-index: 9999;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  left: -0.5rem;
+  top: 0;
+}

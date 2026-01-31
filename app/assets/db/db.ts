@@ -1,0 +1,100 @@
+export const db = {
+  author: {
+    name: "Benjunior Dorlouis",
+    role: "Full-Stack Developper",
+    desc: "I am a full-stack developper originating from the Dominican Republic seeking to be one of the essentials piece in any web development project",
+    year: "1998",
+    number: "8094444169",
+    email: "bentonico98@gmail.com",
+    country: "Dominican Republic",
+    language: "English, Spanish & French",
+    available: "Yes",
+    picture: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+  },
+  skills: [
+    {
+      icon: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+      name: "Test1",
+      expertise: 90,
+    },
+    {
+      icon: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+      name: "Test2",
+      expertise: 80,
+    },
+    {
+      icon: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+      name: "Test3",
+      expertise: 80,
+    },
+    {
+      icon: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+      name: "Test1",
+      expertise: 90,
+    },
+    {
+      icon: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+      name: "Test2",
+      expertise: 80,
+    },
+    {
+      icon: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+      name: "Test3",
+      expertise: 80,
+    },
+    {
+      icon: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+      name: "Test1",
+      expertise: 90,
+    },
+    {
+      icon: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+      name: "Test2",
+      expertise: 80,
+    },
+  ],
+  experiences: [
+    {
+      name: "Test1",
+      icon: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+      years: "2025-2027",
+      country: "Dominican Republic",
+      type: "Fulltime",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.",
+    },
+    {
+      name: "Test1",
+      icon: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+      years: "2025-2027",
+      country: "Dominican Republic",
+      type: "Remote",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.",
+    },
+    {
+      name: "Test1",
+      icon: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+      years: "2025-2027",
+      country: "Dominican Republic",
+      type: "Remote",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.",
+    },
+    {
+      name: "Test1",
+      icon: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+      years: "2025-2027",
+      country: "Dominican Republic",
+      type: "Fulltime",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.",
+    },
+  ],
+  education: [
+    {
+      name: "Test1",
+      icon: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
+      years: "2025-2027",
+      country: "Dominican Republic",
+      type: "College",
+      desc: "System Engineering",
+    },
+  ],
+};
