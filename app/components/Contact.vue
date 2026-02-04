@@ -2,7 +2,7 @@
   <v-container>
     <v-row no-gutters>
       <v-col cols="12" sm="6">
-        <v-sheet class="ma-2 pa-2"> Contact </v-sheet>
+        <ContactForm />
       </v-col>
       <v-col cols="12" sm="6">
         <v-sheet class="ma-2 pa-2"> Contact </v-sheet>

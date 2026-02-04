@@ -1,6 +1,6 @@
 <template lang="">
   <div class="experience-card position-relative pb-5">
-    <p class="text-h4 text-orange">{{ name }}</p>
+    <p class="text-h5 text-orange">{{ name }}</p>
     <p class="text-grey italic">{{ years }}</p>
 
     <p class="">{{ type }}</p>

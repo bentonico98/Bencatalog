@@ -18,11 +18,12 @@
       </v-col>
     </v-row>
   </v-container>
+  <v-divider></v-divider>
 </template>
 <script setup lang="ts">
 import { db } from "~/assets/db/db";
 const employments = ref(db.experiences);
 const education = ref(db.education);
-const employmentsIcon = employments.value[0].icon;
-const educationIcon = education.value[0].icon;
+const employmentsIcon = employments?.value[0]?.icon ?? "";
+const educationIcon = education?.value[0]?.icon ?? "";
 </script>
