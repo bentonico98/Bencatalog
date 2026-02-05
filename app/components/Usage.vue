@@ -6,22 +6,27 @@
       <v-col cols="12" sm="6">
         <v-sheet class="ma-2 pa-2 text-h4"> My cups of tea.... </v-sheet>
         <v-sheet class="ma-2 pa-2">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores.
+          My work primarily involves modern web technologies such as HTML, CSS,
+          JavaScript, and frameworks like React and Next.js, along with backend
+          tools and APIs when needed. I focus on writing maintainable code,
+          optimizing performance, and creating intuitive user experiences that
+          translate ideas into functional products.
         </v-sheet>
         <v-sheet class="ma-2 pa-2">
-          Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-          dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-          elitr, sed diam nonumy eirmod tempor invidunt.
+          Each project in this portfolio was built to solve a real-world
+          problem—whether it’s improving usability, streamlining workflows, or
+          delivering a polished, professional interface. I enjoy learning new
+          technologies and continuously improving my skills through hands-on
+          development.
         </v-sheet>
       </v-col>
       <v-col cols="12" sm="6">
-        <div class="d-flex flex-column">
+        <div class="d-flex flex-column ga-2">
           <ProgressCard
             v-for="(skill, index) in skills"
             :key="index"
             :name="skill.name"
+            :icon="skill.icon"
             :percentage="skill.expertise"
           />
         </div>

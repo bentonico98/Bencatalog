@@ -1,5 +1,6 @@
 <template lang="">
   <v-container>
+    <CustomTitle title="Portfolio" />
     <v-row no-gutters>
       <v-col v-for="(project, index) in projects" :key="index" cols="12" sm="4">
         <PortfolioCard

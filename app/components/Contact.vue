@@ -1,13 +1,32 @@
 <template lang="">
   <v-container>
+    <CustomTitle title="Contact Me" />
     <v-row no-gutters>
       <v-col cols="12" sm="6">
         <ContactForm />
       </v-col>
-      <v-col cols="12" sm="6">
-        <v-sheet class="ma-2 pa-2"> Contact </v-sheet>
+      <v-col cols="12" sm="6" class="d-flex flex-column ga-4">
+        <p class="text-h4">Contact Info</p>
+        <p class="text-black">
+          If you like you saw, don't hesitate to get in touch; I'm not a jack of
+          all trades however fullstack is what i do.
+        </p>
+        <div>
+          <ContactCard
+            v-for="(contact, index) in contacts"
+            :key="index"
+            :icon="contact.icon"
+            :name="contact.name"
+            :value="contact.value"
+          />
+        </div>
+        <p class="text-grey my-2">Visit my social media</p>
+        <SocialMedia />
       </v-col>
     </v-row>
   </v-container>
 </template>
-<script setup lang="ts"></script>
+<script lang="ts" setup>
+import { db } from "~/assets/db/db";
+const contacts = ref(db.contacts);
+</script>
