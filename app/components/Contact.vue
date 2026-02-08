@@ -1,5 +1,5 @@
 <template lang="">
-  <v-container>
+  <v-container id="Contact">
     <CustomTitle title="Contact Me" />
     <v-row no-gutters>
       <v-col cols="12" sm="6">
@@ -27,6 +27,15 @@
   </v-container>
 </template>
 <script lang="ts" setup>
-import { db } from "~/assets/db/db";
+import { db, type skillsType } from "~/assets/db/db";
 const contacts = ref(db.contacts);
+const config = useRuntimeConfig();
+contacts.value.forEach((x: skillsType) => {
+  if (x.name === "Email" && !x.value) {
+    x.value = config.public.email;
+  }
+  if (x.name === "Phone" && !x.value) {
+    x.value = config.public.number;
+  }
+});
 </script>

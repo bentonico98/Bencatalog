@@ -1,5 +1,5 @@
 <template lang="">
-  <v-container>
+  <v-container id="Skills">
     <CustomTitle title="Skills" />
     <v-row>
       <v-col v-for="(skill, index) in skills" :key="index" cols="12" sm="3">

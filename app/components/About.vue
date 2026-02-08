@@ -1,11 +1,11 @@
 <template lang="">
-  <v-container>
+  <v-container id="About">
     <CustomTitle title="About Me" />
     <v-row no-gutters>
       <v-col cols="12" sm="6">
         <v-img
-          lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-          :src="author.picture"
+          lazy-src="/assets/img/fotograd.jpeg"
+          src="/assets/img/fotograd.jpeg"
           aspect-ratio="1"
           class="bg-grey-lighten-2"
           cover
@@ -34,7 +34,7 @@
           >Open To Hire: {{ author.available }}</v-sheet
         >
         <div class="mx-3">
-          <v-btn rounded variant="outlined">Download CV</v-btn>
+          <v-btn rounded variant="outlined" @click="download">View CV</v-btn>
         </div>
       </v-col>
     </v-row>
@@ -42,5 +42,17 @@
 </template>
 <script setup lang="ts">
 import { db } from "~/assets/db/db";
+import viewFile from "~/services/viewFile";
 const author = ref(db.author);
+const objCounts = Object.keys(db.author);
+const config = useRuntimeConfig();
+objCounts.forEach((x: string) => {
+  //@ts-expect-error
+  const elmnt = author?.value[x];
+  if (!elmnt) {
+    //@ts-expect-error
+    author.value[x] = config.public[x];
+  }
+});
+const download = () => viewFile("/cv.pdf");
 </script>

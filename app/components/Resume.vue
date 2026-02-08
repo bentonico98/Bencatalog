@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container id="Resume">
     <CustomTitle title="Resume" />
     <v-row no-gutters>
       <v-col cols="12" sm="6">

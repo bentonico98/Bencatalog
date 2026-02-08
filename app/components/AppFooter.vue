@@ -31,7 +31,8 @@
 <script setup lang="ts">
 import { db } from "~/assets/db/db";
 const socials = ref(db.socials);
-const Navigate = (link: string) => {
+const Navigate = (link: string | undefined) => {
+  if (!link) return;
   navigateTo(link, { external: true });
 };
 </script>

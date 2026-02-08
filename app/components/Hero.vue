@@ -1,5 +1,5 @@
 <template lang="">
-  <div>
+  <div id="Home">
     <v-row no-gutters>
       <v-col
         cols="12"
@@ -10,13 +10,15 @@
           <v-sheet class="ma-2 pa-2">Hello, I'm</v-sheet>
           <v-sheet class="text-h1 ma-2 pa-2"> {{ author.name }} </v-sheet>
           <v-sheet class="text-h5 ma-2 pa-2"> {{ author.role }} </v-sheet>
-          <v-btn rounded variant="outlined">Contact Me</v-btn>
+          <v-btn rounded variant="outlined"
+            ><a class="btn text-black" href="#Contact">Contact Me</a></v-btn
+          >
         </div>
       </v-col>
       <v-col cols="12" sm="6">
         <v-img
           lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-          :src="author.picture"
+          src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
           aspect-ratio="1"
           class="bg-grey-lighten-2"
           cover
@@ -37,4 +39,6 @@
 <script setup lang="ts">
 import { db } from "~/assets/db/db";
 const author = ref(db.author);
+const config = useRuntimeConfig();
+if (!author.value.name) author.value.name = config.public.name;
 </script>

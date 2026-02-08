@@ -1,4 +1,48 @@
-export const db = {
+export type authorType = {
+  role: string;
+  desc: string;
+  name: string | undefined;
+  year: string | undefined;
+  number: string | undefined;
+  email: string | undefined;
+  country: string | undefined;
+  language: string | undefined;
+  available: string;
+};
+export type skillsType = {
+  icon: string;
+  name: string;
+  link?: string;
+  value?: string;
+  expertise?: number;
+};
+export type experiencesType = {
+  icon: string;
+  name: string;
+  years: string;
+  country: string;
+  type: string;
+  desc: string;
+};
+export type projectsType = {
+  url: string;
+  title: string;
+  type: string;
+  icon: string;
+  year: number;
+  live: boolean;
+  technologies: string[];
+};
+export type Dbtype = {
+  author: authorType;
+  skills: skillsType[];
+  experiences: experiencesType[];
+  education: experiencesType[];
+  projects: projectsType[];
+  socials: skillsType[];
+  contacts: skillsType[];
+};
+export const db: Dbtype = {
   author: {
     role: "Full-Stack Developper",
     desc: "I am a full-stack developper originating from the Dominican Republic seeking to be one of the essentials piece in any web development project",
@@ -8,7 +52,6 @@ export const db = {
     email: process.env.NUXT_EMAIL,
     country: process.env.NUXT_COUNTRY,
     language: process.env.NUXT_LANGUAGE,
-    picture: process.env.NUXT_PICTURE,
     available: "Yes",
   },
   skills: [

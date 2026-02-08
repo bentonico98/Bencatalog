@@ -8,6 +8,13 @@
 .go-forth {
   z-index: 99;
 }
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  line-height: 0.01rem;
+  color: white;
+}
 .transparent {
   background-color: transparent;
 }
