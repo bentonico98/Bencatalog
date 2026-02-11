@@ -6,10 +6,13 @@
         sm="6"
         class="d-flex flex-column align-center justify-center"
       >
-        <div class="d-flex flex-column align-start ma-10">
+        <Loading v-if="pending" />
+        <div v-else class="d-flex flex-column align-start ma-10">
           <v-sheet class="ma-2 pa-2">Hello, I'm</v-sheet>
-          <v-sheet class="text-h1 ma-2 pa-2"> {{ author.name }} </v-sheet>
-          <v-sheet class="text-h5 ma-2 pa-2"> {{ author.role }} </v-sheet>
+          <v-sheet class="text-h1 ma-2 pa-2">
+            {{ author?.name }}
+          </v-sheet>
+          <v-sheet class="text-h5 ma-2 pa-2"> {{ author?.role }} </v-sheet>
           <v-btn rounded variant="outlined"
             ><a class="btn text-black" href="#Contact">Contact Me</a></v-btn
           >
@@ -37,8 +40,5 @@
   </div>
 </template>
 <script setup lang="ts">
-import { db } from "~/assets/db/db";
-const author = ref(db.author);
-const config = useRuntimeConfig();
-if (!author.value.name) author.value.name = config.public.name;
+const { data: author, pending } = useFetch("/api/author", { server: false });
 </script>

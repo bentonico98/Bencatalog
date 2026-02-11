@@ -20,18 +20,21 @@
           </template>
         </v-img>
       </v-col>
-      <v-col cols="12" sm="6">
-        <v-sheet class="ma-2 pa-2 text-h3"> Hi! I'm {{ author.name }} </v-sheet>
-        <v-sheet class="ma-2 pa-2 text-h5 text-blue">
-          {{ author.role }}
+      <Loading v-if="pending" />
+      <v-col v-else cols="12" sm="6">
+        <v-sheet class="ma-2 pa-2 text-h3">
+          Hi! I'm {{ author?.name }}
         </v-sheet>
-        <v-sheet class="ma-2 pa-2 text-h7"> {{ author.desc }} </v-sheet>
-        <v-sheet class="ma-2 pa-2">Phone Number: {{ author.number }}</v-sheet>
-        <v-sheet class="ma-2 pa-2">Email: {{ author.email }}</v-sheet>
-        <v-sheet class="ma-2 pa-2">Country: {{ author.country }}</v-sheet>
-        <v-sheet class="ma-2 pa-2">Language: {{ author.language }}</v-sheet>
+        <v-sheet class="ma-2 pa-2 text-h5 text-blue">
+          {{ author?.role }}
+        </v-sheet>
+        <v-sheet class="ma-2 pa-2 text-h7"> {{ author?.desc }} </v-sheet>
+        <v-sheet class="ma-2 pa-2">Phone Number: {{ author?.number }}</v-sheet>
+        <v-sheet class="ma-2 pa-2">Email: {{ author?.email }}</v-sheet>
+        <v-sheet class="ma-2 pa-2">Country: {{ author?.country }}</v-sheet>
+        <v-sheet class="ma-2 pa-2">Language: {{ author?.language }}</v-sheet>
         <v-sheet class="ma-2 pa-2"
-          >Open To Hire: {{ author.available }}</v-sheet
+          >Open To Hire: {{ author?.available }}</v-sheet
         >
         <div class="mx-3">
           <v-btn rounded variant="outlined" @click="download">View CV</v-btn>
@@ -41,18 +44,7 @@
   </v-container>
 </template>
 <script setup lang="ts">
-import { db } from "~/assets/db/db";
 import viewFile from "~/services/viewFile";
-const author = ref(db.author);
-const objCounts = Object.keys(db.author);
-const config = useRuntimeConfig();
-objCounts.forEach((x: string) => {
-  //@ts-expect-error
-  const elmnt = author?.value[x];
-  if (!elmnt) {
-    //@ts-expect-error
-    author.value[x] = config.public[x];
-  }
-});
+const { data: author, pending } = useFetch("/api/author", { server: false });
 const download = () => viewFile("/cv.pdf");
 </script>

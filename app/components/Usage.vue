@@ -22,12 +22,14 @@
       </v-col>
       <v-col cols="12" sm="6">
         <div class="d-flex flex-column ga-2">
+          <Loading v-if="pending" />
           <ProgressCard
+            v-else
             v-for="(skill, index) in skills"
             :key="index"
-            :name="skill.name"
-            :icon="skill.icon"
-            :percentage="skill.expertise"
+            :name="skill?.name"
+            :icon="skill?.icon"
+            :percentage="skill?.expertise"
           />
         </div>
       </v-col>
@@ -35,6 +37,5 @@
   </v-container>
 </template>
 <script setup lang="ts">
-import { db } from "~/assets/db/db";
-const skills = ref(db.skills);
+const { data: skills, pending } = useFetch("/api/skills", { server: false });
 </script>

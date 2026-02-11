@@ -3,11 +3,13 @@
     <CustomTitle title="Portfolio" />
     <v-row no-gutters>
       <v-col v-for="(project, index) in projects" :key="index" cols="12" sm="4">
+        <Loading v-if="pending" />
         <PortfolioCard
-          :image="project.icon"
-          :title="project.title"
-          :type="project.type"
-          :live="project.live"
+          v-else
+          :image="project?.icon"
+          :title="project?.title"
+          :type="project?.type"
+          :live="project?.live"
         />
       </v-col>
     </v-row>
@@ -17,6 +19,7 @@
   </v-container>
 </template>
 <script setup lang="ts">
-import { db } from "~/assets/db/db";
-const projects = ref(db.projects);
+const { data: projects, pending } = useFetch("/api/projects", {
+  server: false,
+});
 </script>

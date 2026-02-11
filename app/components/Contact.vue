@@ -12,12 +12,14 @@
           all trades however fullstack is what i do.
         </p>
         <div>
+          <Loading v-if="pending" />
           <ContactCard
+            v-else
             v-for="(contact, index) in contacts"
             :key="index"
-            :icon="contact.icon"
-            :name="contact.name"
-            :value="contact.value"
+            :icon="contact?.icon"
+            :name="contact?.name"
+            :value="contact?.value"
           />
         </div>
         <p class="text-grey my-2">Visit my social media</p>
@@ -27,15 +29,7 @@
   </v-container>
 </template>
 <script lang="ts" setup>
-import { db, type skillsType } from "~/assets/db/db";
-const contacts = ref(db.contacts);
-const config = useRuntimeConfig();
-contacts.value.forEach((x: skillsType) => {
-  if (x.name === "Email" && !x.value) {
-    x.value = config.public.email;
-  }
-  if (x.name === "Phone" && !x.value) {
-    x.value = config.public.number;
-  }
+const { data: contacts, pending } = useFetch("/api/contacts", {
+  server: false,
 });
 </script>

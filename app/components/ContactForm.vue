@@ -11,7 +11,8 @@
         ignore: false,
       }"
     >
-      <div class="d-flex flex-column align-apart ga-6">
+      <Loading v-if="isLoading" />
+      <div v-else class="d-flex flex-column align-apart ga-6">
         <p class="text-h4">Say Hi</p>
         <FormKit
           type="text"
@@ -63,17 +64,23 @@
           }"
         />
       </div>
+      <ErrorMessage :isError="isError" :error="errorMsj" />
     </FormKit>
   </div>
 </template>
 <script setup lang="ts">
-import SendEmailToBoss from "~/services/resend";
-const config = useRuntimeConfig();
-const apiKey = config.public.RESEND_API_KEY;
+let isError = ref(false);
+let isLoading = ref(false);
+let errorMsj = ref("An error occurred! Try again!");
+
 const SendMessage = async (e: any) => {
-  console.log("e", e);
-  // const { data, error } = await SendEmailToBoss(e, apiKey);
-  // console.log({ data });
-  // return data;
+  isLoading.value = true;
+  const { error } = await $fetch("/api/resend", {
+    method: "POST",
+    body: e,
+  });
+  isError.value = error ? true : false;
+  errorMsj.value = "NEW ERROR";
+  isLoading.value = false;
 };
 </script>

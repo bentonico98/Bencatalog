@@ -4,13 +4,15 @@
     color="black"
   >
     <div class="d-flex ga-3">
+      <Loading v-if="pending" />
       <v-btn
+        v-else
         v-for="icon in socials"
-        :key="icon.icon"
-        :icon="icon.icon"
+        :key="icon?.icon"
+        :icon="icon?.icon"
         density="comfortable"
         variant="text"
-        @click="() => Navigate(icon.link)"
+        @click="() => Navigate(icon?.link)"
       ></v-btn>
     </div>
 
@@ -29,8 +31,7 @@
   </v-footer>
 </template>
 <script setup lang="ts">
-import { db } from "~/assets/db/db";
-const socials = ref(db.socials);
+const { data: socials, pending } = useFetch("/api/socials", { server: false });
 const Navigate = (link: string | undefined) => {
   if (!link) return;
   navigateTo(link, { external: true });
