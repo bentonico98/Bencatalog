@@ -1,5 +1,5 @@
 <template lang="">
-  <div :class="designatedStyle">
+  <div :class="designatedStyle" @click="navigate">
     <img :src="race" class="responsive-fill" />
     <div
       class="overlay centered-image highlighted-border borderless-box appear-on-hover"
@@ -16,7 +16,8 @@
   </div>
 </template>
 <script setup lang="ts">
-const { live } = defineProps<{
+const { live, id } = defineProps<{
+  id: string;
   image: string;
   title: string;
   type: string;
@@ -25,4 +26,7 @@ const { live } = defineProps<{
 import race from "~/assets/img/race.gif";
 const designatedStyle = ref("flex-box position-relative ");
 if (live) designatedStyle.value += " pointer appear-on-hover-container";
+const navigate = () => {
+  navigateTo(`/project/${id}`);
+};
 </script>

@@ -10,5 +10,5 @@
   </v-container>
 </template>
 <script setup lang="ts">
-const { data: skills, pending } = useFetch("/api/skills", { server: false });
+const { data: skills, pending } = useFetch("/api/skills");
 </script>

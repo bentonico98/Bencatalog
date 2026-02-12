@@ -1,12 +1,11 @@
-<template>
+<template lang="">
   <v-footer
     class="text-center bg-black d-flex flex-column ga-2 py-4"
     color="black"
   >
-    <div class="d-flex ga-3">
-      <Loading v-if="pending" />
+    <Loading v-if="pending" />
+    <div v-else class="d-flex ga-3">
       <v-btn
-        v-else
         v-for="icon in socials"
         :key="icon?.icon"
         :icon="icon?.icon"
@@ -31,7 +30,7 @@
   </v-footer>
 </template>
 <script setup lang="ts">
-const { data: socials, pending } = useFetch("/api/socials", { server: false });
+const { data: socials, pending } = useFetch("/api/socials");
 const Navigate = (link: string | undefined) => {
   if (!link) return;
   navigateTo(link, { external: true });

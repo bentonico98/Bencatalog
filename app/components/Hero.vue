@@ -40,5 +40,5 @@
   </div>
 </template>
 <script setup lang="ts">
-const { data: author, pending } = useFetch("/api/author", { server: false });
+const { data: author, pending } = useFetch("/api/author");
 </script>

@@ -6,6 +6,7 @@
         <Loading v-if="pending" />
         <PortfolioCard
           v-else
+          :id="project?.id"
           :image="project?.icon"
           :title="project?.title"
           :type="project?.type"
@@ -19,7 +20,5 @@
   </v-container>
 </template>
 <script setup lang="ts">
-const { data: projects, pending } = useFetch("/api/projects", {
-  server: false,
-});
+const { data: projects, pending } = useFetch("/api/projects");
 </script>

@@ -11,8 +11,3 @@
     </v-toolbar>
   </v-card>
 </template>
-<script setup lang="ts">
-const Navigate = (link: string) => {
-  navigateTo(link);
-};
-</script>

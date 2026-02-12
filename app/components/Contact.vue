@@ -29,7 +29,5 @@
   </v-container>
 </template>
 <script lang="ts" setup>
-const { data: contacts, pending } = useFetch("/api/contacts", {
-  server: false,
-});
+const { data: contacts, pending } = useFetch("/api/contacts");
 </script>

@@ -1,6 +1,4 @@
 export default defineEventHandler(async () => {
-  await new Promise((res) => setTimeout(res, 1000));
-
   const education = [
     {
       name: "Universidad Tecnologica de Santiago (UTESA)",

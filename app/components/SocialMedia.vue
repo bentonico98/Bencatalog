@@ -12,5 +12,5 @@
   </div>
 </template>
 <script setup lang="ts">
-const { data: socials, pending } = useFetch("/api/socials", { server: false });
+const { data: socials, pending } = useFetch("/api/socials");
 </script>

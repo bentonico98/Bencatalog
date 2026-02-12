@@ -1,6 +1,4 @@
 export default defineEventHandler(async () => {
-  await new Promise((res) => setTimeout(res, 1000));
-
   return [
     {
       icon: "https://img.icons8.com/?size=100&id=25Sjy8fKExYA&format=png&color=000000",

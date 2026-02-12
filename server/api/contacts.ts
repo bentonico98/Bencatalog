@@ -1,6 +1,4 @@
 export default defineEventHandler(async () => {
-  await new Promise((res) => setTimeout(res, 1000));
-
   const contacts = [
     {
       value: process.env.NUXT_EMAIL,

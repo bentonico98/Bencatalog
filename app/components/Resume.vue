@@ -1,4 +1,4 @@
-<template>
+<template lang="">
   <v-container id="Resume">
     <CustomTitle title="Resume" />
     <v-row no-gutters>
@@ -25,8 +25,8 @@
 
 <script setup lang="ts">
 const allData = await Promise.all([
-  useFetch("/api/experiences", { server: false }),
-  useFetch("/api/education", { server: false }),
+  useFetch("/api/experiences"),
+  useFetch("/api/education"),
 ]);
 const employments = reactive(allData[0].data);
 const education = reactive(allData[1].data);

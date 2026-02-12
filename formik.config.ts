@@ -1,8 +1,9 @@
 import { en } from "@formkit/i18n";
-import { defineFormKitConfig } from "@formkit/vue";
-import "@formkit/themes/genesis";
+import { defaultConfig } from "@formkit/vue";
+import "@formkit/themes/regenesis";
 
-export default defineFormKitConfig({
+export default defaultConfig({
   locales: { en },
   locale: "en",
+  theme: "regenesis",
 });

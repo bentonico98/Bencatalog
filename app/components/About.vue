@@ -45,6 +45,6 @@
 </template>
 <script setup lang="ts">
 import viewFile from "~/services/viewFile";
-const { data: author, pending } = useFetch("/api/author", { server: false });
+const { data: author, pending } = useFetch("/api/author");
 const download = () => viewFile("/cv.pdf");
 </script>
