@@ -64,23 +64,30 @@
           }"
         />
       </div>
-      <ErrorMessage :isError="isError" :error="errorMsj" />
+      <ErrorMessage color="green" v-if="isSent" :error="successMsj" />
+      <ErrorMessage color="red" v-if="isError" :error="errorMsj" />
     </FormKit>
   </div>
 </template>
 <script setup lang="ts">
-let isError = ref(false);
 let isLoading = ref(false);
+let isError = ref(false);
+let isSent = ref(false);
 let errorMsj = ref("An error occurred! Try again!");
+let successMsj = ref("Email Sent!");
 
 const SendMessage = async (e: any) => {
-  isLoading.value = true;
-  const { error } = await $fetch("/api/resend", {
-    method: "POST",
-    body: e,
-  });
-  isError.value = error ? true : false;
-  errorMsj.value = "NEW ERROR";
-  isLoading.value = false;
+  try {
+    isLoading.value = true;
+    await $fetch("/api/resend", {
+      method: "POST",
+      body: e,
+    });
+    isSent.value = true;
+  } catch (error) {
+    isError.value = error ? true : false;
+  } finally {
+    isLoading.value = false;
+  }
 };
 </script>

@@ -10,6 +10,7 @@ export default defineNuxtConfig({
       year: process.env.NUXT_YEAR,
       number: process.env.NUXT_NUMBER,
       email: process.env.NUXT_EMAIL,
+      sender: process.env.NUXT_SENDER_EMAIL,
       country: process.env.NUXT_COUNTRY,
       language: process.env.NUXT_LANGUAGE,
       picture: process.env.NUXT_PICTURE,

@@ -70,5 +70,10 @@ export default defineEventHandler(async () => {
       name: "Jenkins",
       expertise: 70,
     },
+    {
+      icon: "https://img.icons8.com/?size=100&id=jD-fJzVguBmw&format=png&color=000000",
+      name: "Redux",
+      expertise: 90,
+    },
   ];
 });

@@ -2,7 +2,7 @@
   <v-container id="Portfolio">
     <CustomTitle title="Portfolio" />
     <v-row no-gutters>
-      <v-col v-for="(project, index) in projects" :key="index" cols="12" sm="4">
+      <v-col v-for="(project, index) in projects" :key="index" cols="12" sm="6">
         <Loading v-if="pending" />
         <PortfolioCard
           v-else

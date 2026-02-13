@@ -40,6 +40,10 @@
 .overlay {
   position: absolute;
 }
+.overlay-parent {
+  top: 2rem;
+  left: 3rem;
+}
 .pointer {
   cursor: pointer;
 }
