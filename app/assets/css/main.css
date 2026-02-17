@@ -1,12 +1,30 @@
 .bottom-border {
   border-bottom: 1px solid black;
-  width: 15%;
+  max-width: 50%;
+}
+.bottom-border-full {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  max-width: 100%;
 }
 .go-back {
   z-index: -99;
 }
 .go-forth {
   z-index: 99;
+}
+.my-input {
+  width: 100%;
+  border: 5px solid black;
+  color: black;
+  border-radius: 5px;
+}
+.centered-on-mobile {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 .btn {
   text-transform: uppercase;

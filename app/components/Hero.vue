@@ -9,7 +9,10 @@
         <Loading v-if="pending" />
         <div v-else class="d-flex flex-column align-start ma-10">
           <v-sheet class="ma-2 pa-2">Hello, I'm</v-sheet>
-          <v-sheet class="text-h1 ma-2 pa-2">
+          <v-sheet class="text-h3 pa-2" v-if="isMobile">
+            {{ author?.name }}
+          </v-sheet>
+          <v-sheet v-else class="text-h1 ma-2 pa-2">
             {{ author?.name }}
           </v-sheet>
           <v-sheet class="text-h5 ma-2 pa-2"> {{ author?.role }} </v-sheet>
@@ -18,7 +21,7 @@
           >
         </div>
       </v-col>
-      <v-col cols="12" sm="6">
+      <v-col cols="12" sm="6" v-if="!isMobile">
         <v-img
           lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
           src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
@@ -38,7 +41,9 @@
       </v-col>
     </v-row>
   </div>
+  <v-divider v-if="isMobile"> </v-divider>
 </template>
 <script setup lang="ts">
 const { data: author, pending } = useFetch("/api/author");
+const { isMobile } = useIsMobile();
 </script>

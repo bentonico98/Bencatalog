@@ -75,5 +75,10 @@ export default defineEventHandler(async () => {
       name: "Redux",
       expertise: 90,
     },
+    {
+      icon: "https://img.icons8.com/?size=100&id=zdI5E8moxhs-&format=png&color=000000",
+      name: "GraphQL",
+      expertise: 80,
+    },
   ];
 });

@@ -1,11 +1,11 @@
 <template lang="">
   <v-container id="Contact">
     <CustomTitle title="Contact Me" />
-    <v-row no-gutters>
-      <v-col cols="12" sm="6">
+    <v-row no-gutters class="ga-8">
+      <v-col cols="12" sm="5">
         <ContactForm />
       </v-col>
-      <v-col cols="12" sm="6" class="d-flex flex-column ga-4">
+      <v-col cols="12" sm="5" class="d-flex flex-column ga-4">
         <p class="text-h4">Contact Info</p>
         <p class="text-black">
           If you like you saw, don't hesitate to get in touch; I'm not a jack of

@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   modules: ["@formkit/nuxt"],
   formkit: {
     autoImport: true,
+    configFile: "./formkit.config.ts",
   },
   devtools: { enabled: true },
   build: {

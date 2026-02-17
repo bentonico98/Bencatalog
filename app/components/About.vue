@@ -22,7 +22,10 @@
       </v-col>
       <Loading v-if="pending" />
       <v-col v-else cols="12" sm="6">
-        <v-sheet class="ma-2 pa-2 text-h3">
+        <v-sheet v-if="isMobile" class="ma-2 pa-2 text-h4">
+          Hi! I'm {{ author?.name }}
+        </v-sheet>
+        <v-sheet v-else class="ma-2 pa-2 text-h3">
           Hi! I'm {{ author?.name }}
         </v-sheet>
         <v-sheet class="ma-2 pa-2 text-h5 text-blue">
@@ -46,5 +49,6 @@
 <script setup lang="ts">
 import viewFile from "~/services/viewFile";
 const { data: author, pending } = useFetch("/api/author");
+const { isMobile } = useIsMobile();
 const download = () => viewFile("/cv.pdf");
 </script>
