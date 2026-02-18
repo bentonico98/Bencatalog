@@ -1,0 +1,356 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style id="vuetify-theme-stylesheet">:root {
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 255,255,255;
+      --v-theme-surface-bright-overlay-multiplier: 1;
+      --v-theme-surface-light: 238,238,238;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 24,103,192;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 31,85,146;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 72,169,166;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 238, 238, 238;
+      --v-theme-on-kbd: 0, 0, 0;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--light {
+      color-scheme: normal;
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 255,255,255;
+      --v-theme-surface-bright-overlay-multiplier: 1;
+      --v-theme-surface-light: 238,238,238;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 24,103,192;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 31,85,146;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 72,169,166;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 238, 238, 238;
+      --v-theme-on-kbd: 0, 0, 0;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--dark {
+      color-scheme: dark;
+      --v-theme-background: 18,18,18;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 33,33,33;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 204,191,214;
+      --v-theme-surface-bright-overlay-multiplier: 2;
+      --v-theme-surface-light: 66,66,66;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 200,200,200;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 0,0,0;
+      --v-theme-primary: 33,150,243;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 39,124,193;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 84,182,178;
+      --v-theme-secondary-overlay-multiplier: 2;
+      --v-theme-secondary-darken-1: 72,169,166;
+      --v-theme-secondary-darken-1-overlay-multiplier: 2;
+      --v-theme-error: 207,102,121;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 2;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 2;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 2;
+      --v-theme-on-background: 255,255,255;
+      --v-theme-on-surface: 255,255,255;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 255,255,255;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 255, 255, 255;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 1;
+      --v-medium-emphasis-opacity: 0.7;
+      --v-disabled-opacity: 0.5;
+      --v-idle-opacity: 0.1;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.16;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 66, 66, 66;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 52, 52, 52;
+      --v-theme-on-code: 204, 204, 204;
+    }
+    .bg-background {
+      --v-theme-overlay-multiplier: var(--v-theme-background-overlay-multiplier);
+      background-color: rgb(var(--v-theme-background)) !important;
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .bg-surface {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface)) !important;
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .bg-surface-bright {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-bright-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-bright)) !important;
+      color: rgb(var(--v-theme-on-surface-bright)) !important;
+    }
+    .bg-surface-light {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-light-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-light)) !important;
+      color: rgb(var(--v-theme-on-surface-light)) !important;
+    }
+    .bg-surface-variant {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-variant-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-variant)) !important;
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .bg-primary {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary)) !important;
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .bg-primary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .bg-secondary {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary)) !important;
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .bg-secondary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .bg-error {
+      --v-theme-overlay-multiplier: var(--v-theme-error-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error)) !important;
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .bg-info {
+      --v-theme-overlay-multiplier: var(--v-theme-info-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info)) !important;
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .bg-success {
+      --v-theme-overlay-multiplier: var(--v-theme-success-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success)) !important;
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .bg-warning {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning)) !important;
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+    .text-background {
+      color: rgb(var(--v-theme-background)) !important;
+    }
+    .border-background {
+      --v-border-color: var(--v-theme-background);
+    }
+    .text-surface {
+      color: rgb(var(--v-theme-surface)) !important;
+    }
+    .border-surface {
+      --v-border-color: var(--v-theme-surface);
+    }
+    .text-surface-bright {
+      color: rgb(var(--v-theme-surface-bright)) !important;
+    }
+    .border-surface-bright {
+      --v-border-color: var(--v-theme-surface-bright);
+    }
+    .text-surface-light {
+      color: rgb(var(--v-theme-surface-light)) !important;
+    }
+    .border-surface-light {
+      --v-border-color: var(--v-theme-surface-light);
+    }
+    .text-surface-variant {
+      color: rgb(var(--v-theme-surface-variant)) !important;
+    }
+    .border-surface-variant {
+      --v-border-color: var(--v-theme-surface-variant);
+    }
+    .on-surface-variant {
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .text-primary {
+      color: rgb(var(--v-theme-primary)) !important;
+    }
+    .border-primary {
+      --v-border-color: var(--v-theme-primary);
+    }
+    .text-primary-darken-1 {
+      color: rgb(var(--v-theme-primary-darken-1)) !important;
+    }
+    .border-primary-darken-1 {
+      --v-border-color: var(--v-theme-primary-darken-1);
+    }
+    .text-secondary {
+      color: rgb(var(--v-theme-secondary)) !important;
+    }
+    .border-secondary {
+      --v-border-color: var(--v-theme-secondary);
+    }
+    .text-secondary-darken-1 {
+      color: rgb(var(--v-theme-secondary-darken-1)) !important;
+    }
+    .border-secondary-darken-1 {
+      --v-border-color: var(--v-theme-secondary-darken-1);
+    }
+    .text-error {
+      color: rgb(var(--v-theme-error)) !important;
+    }
+    .border-error {
+      --v-border-color: var(--v-theme-error);
+    }
+    .text-info {
+      color: rgb(var(--v-theme-info)) !important;
+    }
+    .border-info {
+      --v-border-color: var(--v-theme-info);
+    }
+    .text-success {
+      color: rgb(var(--v-theme-success)) !important;
+    }
+    .border-success {
+      --v-border-color: var(--v-theme-success);
+    }
+    .text-warning {
+      color: rgb(var(--v-theme-warning)) !important;
+    }
+    .border-warning {
+      --v-border-color: var(--v-theme-warning);
+    }
+    .on-background {
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .on-surface {
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .on-surface-bright {
+      color: rgb(var(--v-theme-on-surface-bright)) !important;
+    }
+    .on-surface-light {
+      color: rgb(var(--v-theme-on-surface-light)) !important;
+    }
+    .on-primary {
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .on-primary-darken-1 {
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .on-secondary {
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .on-secondary-darken-1 {
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .on-error {
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .on-info {
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .on-success {
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .on-warning {
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+</style><link rel="stylesheet" href="/Bencatalog/_nuxt/entry.CA2qBsUZ.css" crossorigin><link rel="stylesheet" href="/Bencatalog/_nuxt/default.Cclm3P4O.css" crossorigin><link rel="stylesheet" href="/Bencatalog/_nuxt/VImg.vaSe9hHk.css" crossorigin><link rel="stylesheet" href="/Bencatalog/_nuxt/VAvatar.DVTzmG0f.css" crossorigin><link rel="stylesheet" href="/Bencatalog/_nuxt/VBtn.BAAURqku.css" crossorigin><link rel="stylesheet" href="/Bencatalog/_nuxt/index.C2i_LJR3.css" crossorigin><link rel="stylesheet" href="/Bencatalog/_nuxt/CustomTitle.DSUioJro.css" crossorigin><link rel="preload" as="fetch" crossorigin="anonymous" href="/Bencatalog/_payload.json?ccfa1d4f-ff5a-461a-be8e-31b728e5cbf2"><link rel="modulepreload" as="script" crossorigin href="/Bencatalog/_nuxt/Ckk3-0md.js"><link rel="modulepreload" as="script" crossorigin href="/Bencatalog/_nuxt/B71dKbrv.js"><link rel="modulepreload" as="script" crossorigin href="/Bencatalog/_nuxt/DMqz5Ku1.js"><link rel="modulepreload" as="script" crossorigin href="/Bencatalog/_nuxt/D9X60oBK.js"><link rel="modulepreload" as="script" crossorigin href="/Bencatalog/_nuxt/JcIewlbC.js"><link rel="modulepreload" as="script" crossorigin href="/Bencatalog/_nuxt/D4XlcFfg.js"><link rel="modulepreload" as="script" crossorigin href="/Bencatalog/_nuxt/3JJzsWMt.js"><script type="module" src="/Bencatalog/_nuxt/Ckk3-0md.js" crossorigin></script><link rel="prefetch" as="image" type="image/gif" href="/Bencatalog/_nuxt/spinner.BXgfg3YD.gif"><link rel="prefetch" as="image" type="image/jpeg" href="/Bencatalog/_nuxt/fotograd.CDbX5Ysw.jpeg"></head><body><div id="__nuxt"><div><div><div class="v-card v-theme--light v-card--density-default v-card--variant-elevated" style=""><!----><div class="v-card__loader"><div class="v-progress-linear v-theme--light v-locale--is-ltr" style="top:0;height:0;--v-progress-linear-height:2px;" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="opacity:NaN;"></div><div class="v-progress-linear__buffer" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><!----><!--[--><header class="v-toolbar v-toolbar--collapse-start v-toolbar--density-default v-theme--light v-locale--is-ltr text-white bg-black" style=""><!----><!--[--><div class="v-toolbar__content" style="height:64px;"><!----><div class="v-toolbar-title" style=""><div class="v-toolbar-title__placeholder">BenDev<!----></div></div><!--[--><button type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><a class="btn" href="#Home">Home</a><!--]--><!--]--></span><!----><!----></button><button type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><a class="btn" href="#About">About</a><!--]--><!--]--></span><!----><!----></button><button type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><a class="btn" href="#Skills">Skills</a><!--]--><!--]--></span><!----><!----></button><button type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><a class="btn" href="#Usage">Usage</a><!--]--><!--]--></span><!----><!----></button><button type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><a class="btn" href="#Resume">Resume</a><!--]--><!--]--></span><!----><!----></button><button type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><a class="btn" href="#Portfolio">Portfolio</a><!--]--><!--]--></span><!----><!----></button><button type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><a class="btn" href="#Contact">Contact</a><!--]--><!--]--></span><!----><!----></button><!--]--><!----></div><!--]--><!--[--><!----><!--]--></header><!--]--><!----><!--[--><!----><span class="v-card__underlay"></span><!--]--></div><!--[--><div class="v-application v-theme--light v-layout v-layout--full-height v-locale--is-ltr" style=""><div class="v-application__wrap"><!--[--><div><!--[--><div id="Home"><div class="v-row v-row--no-gutters" style=""><div class="v-col-sm-6 v-col-12 d-flex flex-column align-center justify-center" style=""><div class="d-flex flex-column align-start ma-10"><div class="v-sheet v-theme--light ma-2 pa-2" style="">Hello, I&#39;m</div><div class="v-sheet v-theme--light text-h3 pa-2" style="">Benjunior Dorlouis</div><div class="v-sheet v-theme--light text-h5 ma-2 pa-2" style="">Full-Stack Developper</div><button type="button" class="v-btn v-theme--light v-btn--density-default v-btn--rounded v-btn--size-default v-btn--variant-outlined" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><a class="btn text-black" href="#Contact">Contact Me</a><!--]--><!--]--></span><!----><!----></button></div></div><!----></div></div><hr class="v-divider v-theme--light" style="border-style:solid;" aria-orientation="horizontal" role="separator"><!--]--><div class="v-container v-locale--is-ltr" style="" id="About"><div class="d-flex justify-center my-15 position-relative"><p class="bottom-border text-h6 pb-2 go-forth transparent">About Me</p><p class="text-h2 position-absolute text-grey-lighten-2 transparent centered-on-mobile">About Me</p></div><div class="v-row v-row--no-gutters" style=""><div class="v-col-sm-6 v-col-12" style=""><div class="v-responsive v-img v-img--booting bg-grey-lighten-2" style=""><div class="v-responsive__sizer" style="padding-bottom:100%;"></div><!--[--><!--[--><!----><img class="v-img__img v-img__img--preload v-img__img--cover" style="" src="/Bencatalog/_nuxt/fotograd.CDbX5Ysw.jpeg"><!----><!----><!----><!--]--><!--]--><!----></div></div><div class="v-col-sm-6 v-col-12" style=""><div class="v-sheet v-theme--light ma-2 pa-2 text-h4" style=""> Hi! I&#39;m Benjunior Dorlouis</div><div class="v-sheet v-theme--light ma-2 pa-2 text-h5 text-blue" style="">Full-Stack Developper</div><div class="v-sheet v-theme--light ma-2 pa-2 text-h7" style="">I am a full-stack developper originating from the Dominican Republic seeking to be one of the essentials piece in any web development project</div><div class="v-sheet v-theme--light ma-2 pa-2" style="">Phone Number: 18094444169</div><div class="v-sheet v-theme--light ma-2 pa-2" style="">Email: bentonico98@gmail.com</div><div class="v-sheet v-theme--light ma-2 pa-2" style="">Country: Dominican Republic</div><div class="v-sheet v-theme--light ma-2 pa-2" style="">Language: English, Spanish &amp; French</div><div class="v-sheet v-theme--light ma-2 pa-2" style="">Open To Hire: Yes</div><div class="mx-3"><button type="button" class="v-btn v-theme--light v-btn--density-default v-btn--rounded v-btn--size-default v-btn--variant-outlined" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[-->View CV<!--]--><!--]--></span><!----><!----></button></div></div></div></div><div class="v-container v-locale--is-ltr" style="" id="Skills"><div class="d-flex justify-center my-15 position-relative"><p class="bottom-border text-h6 pb-2 go-forth transparent">Skills</p><p class="text-h2 position-absolute text-grey-lighten-2 transparent centered-on-mobile">Skills</p></div><div class="v-row" style="" cols="12" sm="3"><!--[--><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=25Sjy8fKExYA&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">ReactJS</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=45490&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">C#</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=BUnExfsRs3CW&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">VueJS</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=V6HShIzw21x7&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">Javascript</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=sH0rW2TvYdr9&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">Supabase</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=74402&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">MongoDB</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=wU62u24brJ44&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">Amazon Web Services</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=13682&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">Cloudflare</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=22813&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">Docker</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=38561&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">PostgresSQL</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=UGYn5TapNioV&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">PHP</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=13679&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">Java</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=20906&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">Git</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=39292&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">Jenkins</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=jD-fJzVguBmw&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">Redux</div></div></div><div class="v-col d-flex justify-center align-center" style=""><div class="box"><div class="rounded-frame"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=zdI5E8moxhs-&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div class="v-sheet v-theme--light" style="">GraphQL</div></div></div><!--]--></div></div><div class="v-container v-locale--is-ltr" style="" id="Usage"><div class="d-flex justify-center my-15 position-relative"><p class="bottom-border text-h6 pb-2 go-forth transparent">Usage</p><p class="text-h2 position-absolute text-grey-lighten-2 transparent centered-on-mobile">Usage</p></div><div class="v-row v-row--no-gutters" style=""><div class="v-col-sm-6 v-col-12" style=""><div class="v-sheet v-theme--light ma-2 pa-2 text-h4" style=""> My cups of tea.... </div><div class="v-sheet v-theme--light ma-2 pa-2" style=""> My work primarily involves modern web technologies such as HTML, CSS, JavaScript, and frameworks like React and Next.js, along with backend tools and APIs when needed. I focus on writing maintainable code, optimizing performance, and creating intuitive user experiences that translate ideas into functional products. </div><div class="v-sheet v-theme--light ma-2 pa-2" style=""> Each project in this portfolio was built to solve a real-world problem—whether it’s improving usability, streamlining workflows, or delivering a polished, professional interface. I enjoy learning new technologies and continuously improving my skills through hands-on development. </div></div><div class="v-col-sm-6 v-col-12" style=""><div class="d-flex flex-column ga-2"><!--[--><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=25Sjy8fKExYA&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>ReactJS</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:90%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=45490&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>C#</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:80%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=BUnExfsRs3CW&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>VueJS</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:70%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=V6HShIzw21x7&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>Javascript</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:100%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=sH0rW2TvYdr9&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>Supabase</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:80%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=74402&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>MongoDB</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:70%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=wU62u24brJ44&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>Amazon Web Services</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:60%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=13682&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>Cloudflare</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:40%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=22813&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>Docker</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:80%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=38561&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>PostgresSQL</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:60%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=UGYn5TapNioV&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>PHP</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:40%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=13679&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>Java</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:50%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=20906&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>Git</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:80%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=39292&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>Jenkins</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:70%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=jD-fJzVguBmw&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>Redux</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:90%;"></div><!----></div></div></div></div><div class="d-flex"><div class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=zdI5E8moxhs-&amp;format=png&amp;color=000000" width="30" height="30"></div><div class="d-flex flex-grow-1 flex-column"><p>GraphQL</p><div class="d-flex ga-2 align-center"><div class="v-progress-linear v-progress-linear--rounded v-progress-linear--rounded v-theme--light v-locale--is-ltr" style="top:0;height:4px;--v-progress-linear-height:4px;" role="progressbar" aria-hidden="false" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><!----><div class="v-progress-linear__background bg-indigo" style="opacity:NaN;"></div><div class="v-progress-linear__buffer bg-indigo" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__determinate bg-indigo" style="width:80%;"></div><!----></div></div></div></div><!--]--></div></div></div></div><!--[--><div class="v-container v-locale--is-ltr" style="" id="Resume"><div class="d-flex justify-center my-15 position-relative"><p class="bottom-border text-h6 pb-2 go-forth transparent">Resume</p><p class="text-h2 position-absolute text-grey-lighten-2 transparent centered-on-mobile">Resume</p></div><div class="v-row v-row--no-gutters" style=""><div class="v-col-sm-6 v-col-12" style=""><!--[--><div class="d-flex align-center"><div class="rounded-frame border-none"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://img.icons8.com/?size=100&amp;id=EPg0SfDrfTSe&amp;format=png&amp;color=000000" class="bg-grey-lighten-2 centered-image"></div><div><p class="text-h4">Experience</p></div></div><!--[--><div class="experience-card position-relative pb-5"><p class="text-h5 text-orange">Eleganteus Marketplace S.R.L</p><p class="text-grey italic">2024-Current</p><p class="">Fulltime</p><p class="text-bold text-grey">Worked as a Full Stack Developer responsible for designing, developing, and maintaining web applications with a strong focus on backend services built in C# and a modern React frontend. Deployed and managed frontend applications on AWS EC2, ensuring performance, scalability, and reliability. Collaborated closely with cross-functional teams to deliver secure, efficient, and user-friendly solutions.</p><div class="bulletin position-absolute"></div></div><!--]--><!--]--></div><div class="v-col-sm-6 v-col-12" style=""><!--[--><div class="d-flex align-center"><div class="rounded-frame border-none"><img lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" src="https://pbs.twimg.com/profile_images/783336810676006914/HDJDMj4m.jpg" class="bg-grey-lighten-2 centered-image"></div><div><p class="text-h4">Education</p></div></div><!--[--><div class="experience-card position-relative pb-5"><p class="text-h5 text-orange">Universidad Tecnologica de Santiago (UTESA)</p><p class="text-grey italic">2018-2024</p><p class="">University College</p><p class="text-bold text-grey">System Engineering / Computer Science</p><div class="bulletin position-absolute"></div></div><!--]--><!--]--></div></div></div><hr class="v-divider v-theme--light" style="border-style:solid;" aria-orientation="horizontal" role="separator"><!--]--><div class="v-container v-locale--is-ltr" style="" id="Portfolio"><div class="d-flex justify-center my-15 position-relative"><p class="bottom-border text-h6 pb-2 go-forth transparent">Portfolio</p><p class="text-h2 position-absolute text-grey-lighten-2 transparent centered-on-mobile">Portfolio</p></div><div class="v-row v-row--no-gutters" style=""><!--[--><div class="v-col-sm-6 v-col-12" style=""><div class="position-relative pointer appear-on-hover-container my-3"><div class="v-responsive v-img v-img--booting responsive position-relative" style=""><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><img class="v-img__img v-img__img--preload v-img__img--contain" style="" src="/_nuxt/assets/img/xfoliado.gif"><!----><!----><!----><!--]--><!--]--><div class="v-responsive__content"><!--[--><div class="overlay overlay-parent centered-image highlighted-border borderless-box appear-on-hover"><img src="https://img.icons8.com/?size=100&amp;id=7695&amp;format=png&amp;color=000000" class="overlay centered-icon"><p class="text-black text-h5 overlay bottom-0 mb-5">Xfoliado</p><p class="text-black-2 text-h7 overlay bottom-0 mb-1">E-Commerce</p></div><!--]--></div></div></div></div><div class="v-col-sm-6 v-col-12" style=""><div class="position-relative pointer appear-on-hover-container my-3"><div class="v-responsive v-img v-img--booting responsive position-relative" style=""><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><img class="v-img__img v-img__img--preload v-img__img--contain" style="" src="/_nuxt/assets/img/pulse.gif"><!----><!----><!----><!--]--><!--]--><div class="v-responsive__content"><!--[--><div class="overlay overlay-parent centered-image highlighted-border borderless-box appear-on-hover"><img src="https://img.icons8.com/?size=100&amp;id=7695&amp;format=png&amp;color=000000" class="overlay centered-icon"><p class="text-black text-h5 overlay bottom-0 mb-5">Pulse Stats</p><p class="text-black-2 text-h7 overlay bottom-0 mb-1">Statistical / Data Science</p></div><!--]--></div></div></div></div><div class="v-col-sm-6 v-col-12" style=""><div class="position-relative pointer appear-on-hover-container my-3"><div class="v-responsive v-img v-img--booting responsive position-relative" style=""><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><img class="v-img__img v-img__img--preload v-img__img--contain" style="" src="/_nuxt/assets/img/hooprate.gif"><!----><!----><!----><!--]--><!--]--><div class="v-responsive__content"><!--[--><div class="overlay overlay-parent centered-image highlighted-border borderless-box appear-on-hover"><img src="https://img.icons8.com/?size=100&amp;id=7695&amp;format=png&amp;color=000000" class="overlay centered-icon"><p class="text-black text-h5 overlay bottom-0 mb-5">Hooprate</p><p class="text-black-2 text-h7 overlay bottom-0 mb-1">Entertainment / Sport</p></div><!--]--></div></div></div></div><div class="v-col-sm-6 v-col-12" style=""><div class="position-relative pointer appear-on-hover-container my-3"><div class="v-responsive v-img v-img--booting responsive position-relative" style=""><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><img class="v-img__img v-img__img--preload v-img__img--contain" style="" src="/_nuxt/assets/img/nekkochat.gif"><!----><!----><!----><!--]--><!--]--><div class="v-responsive__content"><!--[--><div class="overlay overlay-parent centered-image highlighted-border borderless-box appear-on-hover"><img src="https://img.icons8.com/?size=100&amp;id=7695&amp;format=png&amp;color=000000" class="overlay centered-icon"><p class="text-black text-h5 overlay bottom-0 mb-5">NekkoChat</p><p class="text-black-2 text-h7 overlay bottom-0 mb-1">Chat / Social Media</p></div><!--]--></div></div></div></div><div class="v-col-sm-6 v-col-12" style=""><div class="position-relative pointer appear-on-hover-container my-3"><div class="v-responsive v-img v-img--booting responsive position-relative" style=""><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><img class="v-img__img v-img__img--preload v-img__img--contain" style="" src="/_nuxt/assets/img/budget.gif"><!----><!----><!----><!--]--><!--]--><div class="v-responsive__content"><!--[--><div class="overlay overlay-parent centered-image highlighted-border borderless-box appear-on-hover"><img src="https://img.icons8.com/?size=100&amp;id=7695&amp;format=png&amp;color=000000" class="overlay centered-icon"><p class="text-black text-h5 overlay bottom-0 mb-5">Spending Tracker</p><p class="text-black-2 text-h7 overlay bottom-0 mb-1">Finance / Web</p></div><!--]--></div></div></div></div><div class="v-col-sm-6 v-col-12" style=""><div class="position-relative pointer appear-on-hover-container my-3"><div class="v-responsive v-img v-img--booting responsive position-relative" style=""><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><img class="v-img__img v-img__img--preload v-img__img--contain" style="" src="/_nuxt/assets/img/portfolio.gif"><!----><!----><!----><!--]--><!--]--><div class="v-responsive__content"><!--[--><div class="overlay overlay-parent centered-image highlighted-border borderless-box appear-on-hover"><img src="https://img.icons8.com/?size=100&amp;id=7695&amp;format=png&amp;color=000000" class="overlay centered-icon"><p class="text-black text-h5 overlay bottom-0 mb-5">Portfolio</p><p class="text-black-2 text-h7 overlay bottom-0 mb-1">Web Portfolio</p></div><!--]--></div></div></div></div><!--]--></div><div class="d-flex justify-center my-4"><button type="button" class="v-btn v-theme--light text-black v-btn--density-default v-btn--rounded v-btn--size-default v-btn--variant-outlined" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--> See More <!--]--><!--]--></span><!----><!----></button></div></div><div class="v-container v-locale--is-ltr" style="" id="Contact"><div class="d-flex justify-center my-15 position-relative"><p class="bottom-border text-h6 pb-2 go-forth transparent">Contact Me</p><p class="text-h2 position-absolute text-grey-lighten-2 transparent centered-on-mobile">Contact Me</p></div><div class="v-row v-row--no-gutters ga-8" style=""><div class="v-col-sm-5 v-col-12" style=""><div class="my-8"><!--[--><form class="formkit-form" id="input_0" name="form_1"><!--[--><div class="d-flex flex-column align-apart ga-6"><p class="text-h4">Say Hi</p><div class="bottom-border-full"><div class="formkit-outer" data-family="text" data-type="text" data-empty="true"><div class="formkit-wrapper"><label class="formkit-label" for="name">Name</label><div class="formkit-inner"><!----><!----><input placeholder="Jon Doe" class="formkit-input" type="text" name="name" id="name" aria-required="true"><!----><!----></div></div><!----><!----></div></div><div class="bottom-border-full"><div class="formkit-outer" data-family="text" data-type="email" data-empty="true"><div class="formkit-wrapper"><label class="formkit-label" for="email">Email</label><div class="formkit-inner"><!----><!----><input placeholder="JonDoe@email.com" class="formkit-input" type="email" name="email" id="email" aria-required="true"><!----><!----></div></div><!----><!----></div></div><div class="bottom-border-full"><div class="formkit-outer" data-family="text" data-type="text" data-empty="true"><div class="formkit-wrapper"><label class="formkit-label" for="subject">Subject</label><div class="formkit-inner"><!----><!----><input placeholder="Your subject" class="formkit-input" type="text" name="subject" id="subject" aria-required="true"><!----><!----></div></div><!----><!----></div></div><div class="bottom-border-full"><div class="formkit-outer" data-type="textarea" data-empty="true"><div class="formkit-wrapper"><label class="formkit-label" for="message">Message</label><div class="formkit-inner"><!----><!----><textarea placeholder="Write your message" maxlength="120" cols="40" rows="4" class="formkit-input" name="message" id="message" aria-describedby="help-message"></textarea><!----><!----></div></div><div class="formkit-help" id="help-message">0 / 120</div><!----></div></div></div><!----><!----><!--]--><!----><div class="formkit-actions"><div class="formkit-outer" data-family="button" data-type="submit" data-empty="true"><!----><div class="formkit-wrapper"><button data-theme="light" class="formkit-input primary-button" type="submit" name="submit_2" id="input_1"><!----><!----><!--[-->Send Message<!--]--><!----><!----></button></div><!----></div></div></form><!--]--></div></div><div class="v-col-sm-5 v-col-12 d-flex flex-column ga-4" style=""><p class="text-h4">Contact Info</p><p class="text-black"> If you like you saw, don&#39;t hesitate to get in touch; I&#39;m not a jack of all trades however fullstack is what i do. </p><div><!--[--><div class="rounded-xl d-flex flex-1 ga-2 pa-2 align-center"><div class="rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=53388&amp;format=png&amp;color=000000" width="30" height="30"></div><div><p class="text-h5">Email</p><p class="text-grey">bentonico98@gmail.com</p></div></div><div class="rounded-xl d-flex flex-1 ga-2 pa-2 align-center"><div class="rounded-circle pa-2 highlighted-border d-flex align-center"><img src="https://img.icons8.com/?size=100&amp;id=9659&amp;format=png&amp;color=000000" width="30" height="30"></div><div><p class="text-h5">Phone</p><p class="text-grey">18094444169</p></div></div><!--]--></div><p class="text-grey my-2">Visit my social media</p><div class="d-flex ga-6"><!--[--><div class="highlighted-border rounded-xl d-flex flex-1 ga-2 pa-2 align-center disappear-on-hover-container"><button type="button" class="v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><i class="mdi-github mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i></span><!----><!----></button><div class="disappear-on-hover"><p>My Github</p></div></div><div class="highlighted-border rounded-xl d-flex flex-1 ga-2 pa-2 align-center disappear-on-hover-container"><button type="button" class="v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><i class="mdi-linkedin mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i></span><!----><!----></button><div class="disappear-on-hover"><p>My Linkedin</p></div></div><div class="highlighted-border rounded-xl d-flex flex-1 ga-2 pa-2 align-center disappear-on-hover-container"><button type="button" class="v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><i class="mdi-instagram mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i></span><!----><!----></button><div class="disappear-on-hover"><p>My Instagram</p></div></div><div class="highlighted-border rounded-xl d-flex flex-1 ga-2 pa-2 align-center disappear-on-hover-container"><button type="button" class="v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><i class="mdi-facebook mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i></span><!----><!----></button><div class="disappear-on-hover"><p>My Facebook</p></div></div><!--]--></div></div></div></div></div><!--]--></div></div><!--]--><footer class="v-footer v-theme--light bg-black text-center bg-black d-flex flex-column ga-2 py-4" style="height:auto;"><div class="d-flex ga-3"><!--[--><button type="button" class="v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><i class="mdi-github mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i></span><!----><!----></button><button type="button" class="v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><i class="mdi-linkedin mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i></span><!----><!----></button><button type="button" class="v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><i class="mdi-instagram mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i></span><!----><!----></button><button type="button" class="v-btn v-btn--icon v-theme--light v-btn--density-comfortable v-btn--size-default v-btn--variant-text" style=""><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><i class="mdi-facebook mdi v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"></i></span><!----><!----></button><!--]--></div><hr class="v-divider v-theme--light my-2" style="border-top-width:2px;border-style:solid;" aria-orientation="horizontal" role="separator" width="50"><div class="text-caption font-weight-regular opacity-60"> The following project is a personal Fullstack / Web Developer portfolio; all assets used on the website to the exceptions of icons and logos, are considered property of Benjunior Dorlouis and shouldn&#39;t be used without the written or verbal consent of Benjunior Dorlouis </div><hr class="v-divider v-theme--light" style="border-style:solid;" aria-orientation="horizontal" role="separator"><div>© 2026</div></footer></div></div></div><div id="teleports"></div><script>window.__NUXT__={};window.__NUXT__.config={public:{RESEND_API_KEY:"re_bCN6cxCm_Ns2if5VBdk2nfjgAYjgCzW7m",name:"Benjunior Dorlouis",year:"1998",number:"18094444169",email:"bentonico98@gmail.com",sender:"bencatalog@xfoliado.com",country:"Dominican Republic",language:"English, Spanish & French",picture:""},app:{baseURL:"/Bencatalog/",buildId:"ccfa1d4f-ff5a-461a-be8e-31b728e5cbf2",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script><script type="application/json" data-nuxt-data="nuxt-app" data-ssr="true" id="__NUXT_DATA__" data-src="/Bencatalog/_payload.json?ccfa1d4f-ff5a-461a-be8e-31b728e5cbf2">[{"state":1,"once":3,"_errors":4,"serverRendered":6,"path":7,"prerenderedAt":8},["Reactive",2],{},["Set"],["ShallowReactive",5],{"$fNVk-BZjOQ-qzYHluqePrdv8vgJ7_7uuCjwtsKSsWfGA":-1,"$fsiHc-fOormA_IF6O0sbuDYOmwv-jjrqjlGSxkANQm4k":-1,"$fe7gtpIzcIm8_s_S8SHe02La8xnfrtjlcOQ2Eh2g1tx4":-1,"$fpwyAfH8cXKmwGmJERArs-gJUMLkT3K7GTSPO2BYJ2vI":-1,"$f-Ad_7dGEdfBbWdHnu2AgSpkbsQhjgpbAcrk-Q0AtrYE":-1,"$fpevDlYtYC7CMcSWVWPVJjj60QuajQwmNmyLPS6IezLQ":-1,"$f3eO4FUJQI2pxhTblU_XcD3mkL4R-hjxOGEOWPeZClB8":-1,"$fSL_F0AsK59nndK3-vtZjzhcHnnuTex48O5jLuSvefPk":-1,"$fqzD-05iyDiyasxFLtSLTQ5-pVPISb4LrvOvcqSpv11E":-1,"$fhePJ0pMJtGQmJHY-cJ0NLTf9yHAUg5AbQM68hIszcug":-1},true,"/",1771450669875]</script></body></html>
