@@ -1,0 +1,134 @@
+.bottom-border {
+  border-bottom: 1px solid black;
+  max-width: 50%;
+}
+.bottom-border-full {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  max-width: 100%;
+}
+.go-back {
+  z-index: -99;
+}
+.go-forth {
+  z-index: 99;
+}
+.my-input {
+  width: 100%;
+  border: 5px solid black;
+  color: black;
+  border-radius: 5px;
+}
+.centered-on-mobile {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  line-height: 0.01rem;
+  color: white;
+}
+.transparent {
+  background-color: transparent;
+}
+.rounded-frame {
+  max-width: 50%;
+  border: 1px solid rgb(11, 80, 230);
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.primary-button {
+  border: 1px solid black;
+  color: white;
+  padding: 0.3rem 0.5rem;
+  margin: 0.5rem 0;
+}
+.highlighted-border {
+  border: 1px solid black;
+}
+.overlay {
+  position: absolute;
+}
+.overlay-parent {
+  top: 2rem;
+  left: 3rem;
+}
+.pointer {
+  cursor: pointer;
+}
+.centered-image {
+  width: 50%;
+  height: auto;
+}
+.centered-icon {
+  width: 15%;
+  height: auto;
+}
+.spinner-icon {
+  width: 5rem;
+  height: 5rem;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+.responsive-fill {
+  width: 100%;
+  height: 100%;
+}
+.max-width-70 {
+  max-width: 70%;
+}
+.box {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.1rem 0;
+  width: 15rem;
+  height: 15rem;
+}
+.borderless-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
+}
+.flex-box {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  max-width: 25rem;
+  min-height: 20rem;
+  height: 20rem;
+}
+
+.experience-card {
+  border-left: 1px solid rgb(129, 129, 129);
+  padding-left: 3rem;
+}
+
+.bulletin {
+  background-color: rgb(129, 129, 129);
+  z-index: 9999;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  left: -0.5rem;
+  top: 0;
+}
