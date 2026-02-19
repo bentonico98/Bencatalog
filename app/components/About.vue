@@ -4,8 +4,8 @@
     <v-row no-gutters>
       <v-col cols="12" sm="6">
         <v-img
-          lazy-src="/assets/img/fotograd.jpeg"
-          src="/assets/img/fotograd.jpeg"
+          :lazy-src="fotograd"
+          :src="fotograd"
           aspect-ratio="1"
           class="bg-grey-lighten-2"
           cover
@@ -48,7 +48,11 @@
 </template>
 <script setup lang="ts">
 import viewFile from "~/services/viewFile";
+import fotograd from "~/assets/img/fotograd.jpeg";
+const config = useRuntimeConfig();
+const url = config.public.baseURL;
+const viewUrl = `${url}cv.pdf`;
 const { data: author, pending } = useFetch("/api/author");
 const { isMobile } = useIsMobile();
-const download = () => viewFile("/cv.pdf");
+const download = () => viewFile(viewUrl);
 </script>

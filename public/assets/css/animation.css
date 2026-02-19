@@ -1,0 +1,22 @@
+.appear-on-hover {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.appear-on-hover-container:hover .appear-on-hover {
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+.disappear-on-hover {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+  transition: all 3s cubic-bezier(0.62, 0.29, 0.17, 1.21);
+}
+.disappear-on-hover-container:hover .disappear-on-hover {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+  transition: all 3s cubic-bezier(0.62, 0.29, 0.17, 1.21);
+}

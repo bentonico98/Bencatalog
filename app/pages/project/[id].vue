@@ -2,7 +2,9 @@
   <div>
     <v-row no-gutters>
       <v-col cols="12" sm="6">
+        <Loading v-if="pending" />
         <v-img
+          v-else
           :lazy-src="project?.icon"
           :src="project?.icon"
           class="bg-grey-lighten-2"
@@ -128,6 +130,356 @@
 <script setup lang="ts">
 const route = useRoute();
 const id = ref(route.params.id);
-const { data: project, pending } = await useFetch(`/api/projects/${id.value}`);
+// const { data: project, pending } = await useFetch(`/api/projects/${id.value}`);
+let pending = ref(true);
+const config = useRuntimeConfig();
+
 const { isMobile } = useIsMobile();
+const url = config.public.baseURL;
+
+const projects = ref([
+  {
+    id: `1`,
+    url: `https://www.xfoliado.com`,
+    title: `Xfoliado`,
+    type: `E-Commerce`,
+    icon: `${url}assets/img/xfoliado.gif`,
+    year: 2024,
+    live: true,
+    desc: `This project showcases the design and development of a modern online beauty store website created to deliver a seamless and visually engaging shopping experience. The website features a clean, elegant interface that reflects the sophistication of the beauty industry while maintaining user-friendly navigation.`,
+    pages: [
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_home_1.JPG`,
+        title: `Home`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_home_2.JPG`,
+        title: `Best Seller Widget`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_home_3.JPG`,
+        title: `Hero 1`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_home_4.JPG`,
+        title: `Product Showcase`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_home_5.JPG`,
+        title: `Category Showcase`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_home_6.JPG`,
+        title: `User's Review Showcase`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_home_7.JPG`,
+        title: `Bundle Showcase`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_home_8.JPG`,
+        title: `Footer`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_store_1.JPG`,
+        title: `Store Version 1`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_sets_1.JPG`,
+        title: `Store Version 2`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_discount_1.JPG`,
+        title: `Store Version 3`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_cart_1.JPG`,
+        title: `Shopping Cart`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_checkout_1.JPG`,
+        title: `Checkout 1`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_checkout_2.JPG`,
+        title: `Checkout 2`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_checkout_3.JPG`,
+        title: `Checkout 3`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_login_1.JPG`,
+        title: `Login`,
+      },
+      {
+        url: `${url}assets/img/xfoliado/xfoliado_login_2.JPG`,
+        title: `Register`,
+      },
+    ],
+    technologies: [
+      `React`,
+      `Javascript`,
+      `Typecript`,
+      `C#`,
+      `AWS`,
+      `Docker`,
+      `MongoDB`,
+      `PostgresSQL`,
+      `RabbbitMQ`,
+      `S3`,
+      `JWT`,
+      `Ocelot`,
+      `Cloudflare`,
+      `Playwright`,
+      `Jenkins`,
+      `Re-Captha`,
+      `PaypalSDK`,
+      `AzulSDK`,
+      `K6`,
+      `i18n`,
+      `Redux`,
+      `MUI`,
+      `Datadog`,
+      `OAuth`,
+    ],
+    participation: [`Frontend`, `Backend`, `Database`, `Tester`, `Server`],
+  },
+  {
+    id: `2`,
+    url: `no url`,
+    title: `Pulse Stats`,
+    type: `Statistical / Data Science`,
+    icon: `${url}assets/img/pulse.gif`,
+    year: 2024,
+    live: false,
+    desc: `This project involves the design and development of a modern, data-driven website focused on Data Science and Statistics. The platform was created to present complex analytical concepts, datasets, and insights in a clear, interactive, and visually engaging manner.`,
+    pages: [
+      {
+        url: `${url}assets/img/pulse/pulse_home_1.JPG`,
+        title: `Home 1`,
+      },
+      {
+        url: `${url}assets/img/pulse/pulse_home_2.JPG`,
+        title: `Home 2`,
+      },
+      {
+        url: `${url}assets/img/pulse/pulse_home_3.JPG`,
+        title: `Home 3`,
+      },
+      {
+        url: `${url}assets/img/pulse/pulse_home_4.JPG`,
+        title: `Home 4`,
+      },
+      {
+        url: `${url}assets/img/pulse/pulse_dash_1.JPG`,
+        title: `Dashboard Demo`,
+      },
+      {
+        url: `${url}assets/img/pulse/pulse_login_1.JPG`,
+        title: `Login`,
+      },
+      {
+        url: `${url}assets/img/pulse/pulse_login_2.JPG`,
+        title: `Register`,
+      },
+    ],
+    technologies: [
+      `React`,
+      `Javascript`,
+      `Typescript`,
+      `Axios`,
+      `Docker`,
+      `Zod`,
+      `Lucide React`,
+      `Supabase`,
+      `C#`,
+      `Tailwind`,
+      `PostgresSQL`,
+    ],
+    participation: [`Frontend`, `Backend`],
+  },
+  {
+    id: `3`,
+    url: `no url`,
+    title: `Hooprate`,
+    type: `Entertainment / Sport`,
+    icon: `${url}assets/img/hooprate.gif`,
+    year: 2023,
+    live: false,
+    desc: `This project focuses on the design and development of a dynamic Entertainment and Sports Data Center website. The platform was created to centralize, analyze, and present sports statistics, event data, and entertainment industry insights in an interactive and visually compelling format.`,
+    pages: [
+      {
+        url: `${url}assets/img/hooprate/hooprate_home_1.JPG`,
+        title: `Home`,
+      },
+      {
+        url: `${url}assets/img/hooprate/hooprate_discover_1.JPG`,
+        title: `Discover`,
+      },
+      {
+        url: `${url}assets/img/hooprate/hooprate_teams_1.JPG`,
+        title: `Players / Teams`,
+      },
+      {
+        url: `${url}assets/img/hooprate/hooprate_reviews_1.JPG`,
+        title: `Reviews`,
+      },
+      {
+        url: `${url}assets/img/hooprate/hooprate_leaderboard_1.JPG`,
+        title: `Leaderboard`,
+      },
+      {
+        url: `${url}assets/img/hooprate/hooprate_leader_1.JPG`,
+        title: `Leader`,
+      },
+      {
+        url: `${url}assets/img/hooprate/hooprate_dashboard_1.JPG`,
+        title: `Dashboard`,
+      },
+      {
+        url: `${url}assets/img/hooprate/hooprate_login_1.JPG`,
+        title: `Login`,
+      },
+      {
+        url: `${url}assets/img/hooprate/hooprate_login_2.JPG`,
+        title: `Register`,
+      },
+    ],
+    technologies: [
+      `React`,
+      `Javascript`,
+      `Typescript`,
+      `C#`,
+      `Docker`,
+      `Tailwind`,
+      `Zod`,
+      `Lucide React`,
+      `Axios`,
+      `Tanstack`,
+      `Redux`,
+      `Radix-UI`,
+    ],
+    participation: [`Backend`],
+  },
+  {
+    id: `4`,
+    url: `no url`,
+    title: `NekkoChat`,
+    type: `Chat / Social Media`,
+    icon: `${url}assets/img/nekkochat.gif`,
+    year: 2023,
+    live: false,
+    desc: `This project involves the design and development of a real-time chat web application focused on seamless communication and modern user experience. The platform was built with a clean, intuitive interface that enables instant messaging, user authentication, and responsive interaction across multiple devices.`,
+    pages: [
+      {
+        url: `${url}assets/img/nekkochat/nekkochat_welcome_1.JPG`,
+        title: `Welcome`,
+      },
+      {
+        url: `${url}assets/img/nekkochat/nekkochat_inbox_1.JPG`,
+        title: `Inbox`,
+      },
+      {
+        url: `${url}assets/img/nekkochat/nekkochat_inbox_2.JPG`,
+        title: `Inbox`,
+      },
+      {
+        url: `${url}assets/img/nekkochat/nekkochat_chat_1.JPG`,
+        title: `Chat`,
+      },
+      {
+        url: `${url}assets/img/nekkochat/nekkochat_friends_5.JPG`,
+        title: `Friends`,
+      },
+      {
+        url: `${url}assets/img/nekkochat/nekkochat_login_1.JPG`,
+        title: `Login`,
+      },
+      {
+        url: `${url}assets/img/nekkochat/nekkochat_login_2.JPG`,
+        title: `Register`,
+      },
+    ],
+    technologies: [
+      `VueJS`,
+      `Javascript`,
+      `Typescript`,
+      `C#`,
+      `WebRTC`,
+      `Formik`,
+      `MySql`,
+    ],
+    participation: [`Frontend`, `Backend`, `Database`],
+  },
+  {
+    id: `5`,
+    url: `no url`,
+    title: `Spending Tracker`,
+    type: `Finance / Web`,
+    icon: `${url}assets/img/budget.gif`,
+    year: 2022,
+    live: false,
+    desc: `This project involves the design and development of a responsive Expense Tracker web application aimed at helping users efficiently manage their personal finances. The platform provides an intuitive interface for recording income and expenses, categorizing transactions, and monitoring financial trends through visual reports.`,
+    pages: [
+      {
+        url: `${url}assets/img/budget/budget_dashboard_1.JPG`,
+        title: `Dashboard`,
+      },
+      {
+        url: `${url}assets/img/budget/budget_dashboard_2.JPG`,
+        title: `Dashboard`,
+      },
+      {
+        url: `${url}assets/img/budget/budget_budget_1.JPG`,
+        title: `Budget Screen`,
+      },
+      {
+        url: `${url}assets/img/budget/budget_stats_1.JPG`,
+        title: `Stats Screen`,
+      },
+      {
+        url: `${url}assets/img/budget/budget_trans_1.JPG`,
+        title: `Transactions Screen`,
+      },
+      {
+        url: `${url}assets/img/budget/budget_welcome_1.JPG`,
+        title: `Welcome`,
+      },
+      {
+        url: `${url}assets/img/budget/budget_login_1.JPG`,
+        title: `Login`,
+      },
+      {
+        url: `${url}assets/img/budget/budget_login_2.JPG`,
+        title: `Register`,
+      },
+    ],
+    technologies: [
+      `ReactJS`,
+      `Javascript`,
+      `Typescript`,
+      `PHP`,
+      `Laravel`,
+      `Xampp`,
+      `MUI`,
+    ],
+    participation: [`Frontend`, `Backend`, `Database`, `Server`],
+  },
+  {
+    id: `6`,
+    url: `current domain`,
+    title: `Portfolio`,
+    type: `Web Portfolio`,
+    icon: `${url}assets/img/portfolio.gif`,
+    year: 2026,
+    live: true,
+    desc: `A highly motivated and detail-oriented Web Developer specializing in building responsive, user-friendly, and performance-driven web applications. Experienced in modern web technologies including HTML5, CSS3, JavaScript, and popular frameworks such as React, Angular, and Node.js. Passionate about creating clean, efficient code and delivering seamless digital experiences that align with business goals. Strong understanding of UI/UX principles, cross-browser compatibility, and mobile-first design.`,
+    pages: [],
+    technologies: [`VueJS`, `Javascript`, `Typescript`, `Nuxt`, `Tailwind`],
+    participation: [`Frontend`, `Backend`, `Database`, `Server`],
+  },
+]);
+const project = ref(projects.value.filter((x) => x.id === id.value)[0]);
+pending.value = false;
 </script>
