@@ -14,9 +14,6 @@
         />
       </v-col>
     </v-row>
-    <div class="d-flex justify-center my-4">
-      <v-btn color="black" rounded variant="outlined"> See More </v-btn>
-    </div>
   </v-container>
 </template>
 <script setup lang="ts">

@@ -2,7 +2,6 @@
   <div>
     <Hero />
     <About />
-    <Skills />
     <Usage />
     <Resume />
     <Portfolio />
