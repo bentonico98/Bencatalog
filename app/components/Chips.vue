@@ -7,7 +7,7 @@
 <script setup lang="ts">
 const finalClass = ref(" ma-2 text-wrap ");
 const { customClass } = defineProps<{
-  text: string | boolean | number;
+  text: string | boolean | number | undefined | null | any;
   icon: string;
   customClass?: string;
 }>();

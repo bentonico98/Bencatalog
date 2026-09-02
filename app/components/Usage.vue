@@ -30,6 +30,7 @@
             :name="skill?.name"
             :icon="skill?.icon"
             :percentage="skill?.expertise"
+            :destination="skill?.name"
           />
         </div>
       </v-col>

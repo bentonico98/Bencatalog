@@ -32,7 +32,7 @@ export default defineEventHandler(async () => {
     },
     {
       icon: "https://img.icons8.com/?size=100&id=wU62u24brJ44&format=png&color=000000",
-      name: "Amazon Web Services",
+      name: "AWS",
       expertise: 60,
     },
     {

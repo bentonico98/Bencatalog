@@ -1,6 +1,164 @@
 const url = process.env.NUXT_APP_BASE_URL;
 export const projectsTable = [
   {
+    id: `8`,
+    url: `no url`,
+    title: `Golden Touch Massage`,
+    type: `Bookings`,
+    icon: `${url}assets/img/golden.gif`,
+    year: 2026,
+    live: false,
+    desc: `This is an ongoing project for a massage parlour, to expedite their bookings and give them online visibility.`,
+    pages: [
+      {
+        url: `${url}assets/img/golden/golden_home_1.JPG`,
+        title: `Home`,
+      },
+      {
+        url: `${url}assets/img/golden/golden_home_2.JPG`,
+        title: `Home`,
+      },
+      {
+        url: `${url}assets/img/golden/golden_home_3.JPG`,
+        title: `Home`,
+      },
+      {
+        url: `${url}assets/img/golden/golden_home_4.JPG`,
+        title: `Home`,
+      },
+      {
+        url: `${url}assets/img/golden/golden_services_1.JPG`,
+        title: `Services Showcase`,
+      },
+      {
+        url: `${url}assets/img/golden/golden_checkout_1.JPG`,
+        title: `Checkout`,
+      },
+      {
+        url: `${url}assets/img/golden/golden_checkout_2.JPG`,
+        title: `Checkout`,
+      },
+      {
+        url: `${url}assets/img/golden/golden_checkout_3.JPG`,
+        title: `Checkout`,
+      },
+      {
+        url: `${url}assets/img/golden/golden_contact_1.JPG`,
+        title: `Contact Me`,
+      },
+      {
+        url: `${url}assets/img/golden/golden_login_1.JPG`,
+        title: `Login`,
+      },
+      {
+        url: `${url}assets/img/golden/golden_register_1.JPG`,
+        title: `Register`,
+      },
+    ],
+    technologies: [
+      `Git`,
+      `ReactJS`,
+      `Javascript`,
+      `Typecript`,
+      `GraphQL`,
+      `HotChocolate`,
+      `Yup`,
+      `Apollo/Client`,
+      `Apollo/Server`,
+      `NodeJS`,
+      `AWS`,
+      `Docker`,
+      `MongoDB`,
+      `S3`,
+      `Redux`,
+      `C# .Net`,
+      `Datadog`,
+      `OAuth`,
+      `Paypal SDK`,
+    ],
+    participation: [`Frontend`, `Backend`, `Database`, `Tester`, `Server`],
+  },
+  {
+    id: `7`,
+    url: `no url`,
+    title: `Synti Ai Studio`,
+    type: `Ai Studio`,
+    icon: `${url}assets/img/synti.gif`,
+    year: 2026,
+    live: false,
+    desc: `This project showcases the design and development of a custom Ai Studio & Agent.`,
+    pages: [
+      {
+        url: `${url}assets/img/synti/synti_home_1.JPG`,
+        title: `Home`,
+      },
+      {
+        url: `${url}assets/img/synti/synti_home_2.JPG`,
+        title: `Home`,
+      },
+      {
+        url: `${url}assets/img/synti/synti_home_3.JPG`,
+        title: `Home`,
+      },
+      {
+        url: `${url}assets/img/synti/synti_home_4.JPG`,
+        title: `Home`,
+      },
+      {
+        url: `${url}assets/img/synti/synti_dash_1.JPG`,
+        title: `Dashboard Showcase`,
+      },
+      {
+        url: `${url}assets/img/synti/synti_dash_2.JPG`,
+        title: `Dashboard Showcase`,
+      },
+      {
+        url: `${url}assets/img/synti/synti_dash_3.JPG`,
+        title: `Dashboard Showcase`,
+      },
+      {
+        url: `${url}assets/img/synti/synti_dash_4.JPG`,
+        title: `Dashboard Showcase`,
+      },
+      {
+        url: `${url}assets/img/synti/synti_dash_5.JPG`,
+        title: `Dashboard Showcase`,
+      },
+      {
+        url: `${url}assets/img/synti/synti_login_1.JPG`,
+        title: `Login`,
+      },
+      {
+        url: `${url}assets/img/synti/synti_login_2.JPG`,
+        title: `Register`,
+      },
+    ],
+    technologies: [
+      `Git`,
+      `ReactJS`,
+      `Javascript`,
+      `Typecript`,
+      `Firebase`,
+      `Radix UI`,
+      `Lucide React`,
+      `ZOD`,
+      `Apollo`,
+      `AWS`,
+      `NodeJS`,
+      `AWS`,
+      `Docker`,
+      `PostgresSQL`,
+      `S3`,
+      `Redux`,
+      `MUI`,
+      `Datadog`,
+      `OAuth`,
+      `C#`,
+      `GraphQL`,
+    ],
+    participation: [`Frontend`, `Backend`, `Database`, `Tester`, `Server`],
+  },
+  {
     id: `1`,
     url: `https://www.xfoliado.com`,
     title: `Xfoliado`,
@@ -80,7 +238,8 @@ export const projectsTable = [
       },
     ],
     technologies: [
-      `React`,
+      `Git`,
+      `ReactJS`,
       `Javascript`,
       `Typecript`,
       `C#`,
@@ -147,7 +306,8 @@ export const projectsTable = [
       },
     ],
     technologies: [
-      `React`,
+      `Git`,
+      `ReactJS`,
       `Javascript`,
       `Typescript`,
       `Axios`,
@@ -209,7 +369,8 @@ export const projectsTable = [
       },
     ],
     technologies: [
-      `React`,
+      `Git`,
+      `ReactJS`,
       `Javascript`,
       `Typescript`,
       `C#`,
@@ -264,6 +425,7 @@ export const projectsTable = [
       },
     ],
     technologies: [
+      `Git`,
       `VueJS`,
       `Javascript`,
       `Typescript`,
@@ -318,6 +480,7 @@ export const projectsTable = [
       },
     ],
     technologies: [
+      `Git`,
       `ReactJS`,
       `Javascript`,
       `Typescript`,
@@ -338,7 +501,14 @@ export const projectsTable = [
     live: true,
     desc: `A highly motivated and detail-oriented Web Developer specializing in building responsive, user-friendly, and performance-driven web applications. Experienced in modern web technologies including HTML5, CSS3, JavaScript, and popular frameworks such as React, Angular, and Node.js. Passionate about creating clean, efficient code and delivering seamless digital experiences that align with business goals. Strong understanding of UI/UX principles, cross-browser compatibility, and mobile-first design.`,
     pages: [],
-    technologies: [`VueJS`, `Javascript`, `Typescript`, `Nuxt`, `Tailwind`],
+    technologies: [
+      `Git`,
+      `VueJS`,
+      `Javascript`,
+      `Typescript`,
+      `Nuxt`,
+      `Tailwind`,
+    ],
     participation: [`Frontend`, `Backend`, `Database`, `Server`],
   },
 ];

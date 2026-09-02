@@ -1,5 +1,5 @@
 <template lang="">
-  <div>
+  <div v-for="(project, index) in projects" :key="index">
     <v-row no-gutters>
       <v-col cols="12" sm="6">
         <Loading v-if="pending" />
@@ -102,39 +102,14 @@
       </v-col>
     </v-row>
     <v-divider></v-divider>
-    <div v-if="project?.pages?.length > 0">
-      <v-container>
-        <CustomTitle title="Gallery" />
-        <div v-for="(page, index) in project.pages" :key="index">
-          <p
-            class="d-flex justify-center text-h5 pb-3 go-forth transparent mt-4"
-          >
-            {{ page?.title }}
-          </p>
-          <v-img
-            :lazy-src="page?.url"
-            :src="page?.url"
-            class="bg-grey-lighten-2"
-            cover
-          >
-            <template v-slot:placeholder>
-              <v-row align="center" class="ma-0" justify="center">
-                <v-progress-circular
-                  color="grey-lighten-5"
-                  indeterminate
-                ></v-progress-circular>
-              </v-row>
-            </template>
-          </v-img>
-        </div>
-      </v-container>
-    </div>
   </div>
 </template>
 <script setup lang="ts">
 const route = useRoute();
 const id = ref(route.params.id);
-const { data: project, pending } = await useFetch(`/api/projects/${id.value}`);
+const { data: projects, pending } = await useFetch(
+  `/api/categories/${id.value}`,
+);
 const config = useRuntimeConfig();
 
 const { isMobile } = useIsMobile();

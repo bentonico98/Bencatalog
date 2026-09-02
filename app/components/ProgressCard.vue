@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="d-flex">
+  <div @click="navigate" class="d-flex cursor-pointer">
     <div
       class="flex-shink-1 rounded-circle pa-2 highlighted-border d-flex align-center"
     >
@@ -18,5 +18,13 @@
   </div>
 </template>
 <script setup lang="ts">
-defineProps<{ name: string; icon: string; percentage: number }>();
+const { destination } = defineProps<{
+  name: string;
+  icon: string;
+  percentage: number;
+  destination?: string | undefined;
+}>();
+const navigate = () => {
+  navigateTo(`/category/${destination}`);
+};
 </script>
