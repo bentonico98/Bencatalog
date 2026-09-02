@@ -10,6 +10,9 @@ const navItems = [
   { title: "Portfolio", href: "#Portfolio" },
   { title: "Contact", href: "#Contact" },
 ];
+const navigate = () => {
+  navigateTo(`/`);
+};
 </script>
 
 <template>
@@ -21,7 +24,9 @@ const navItems = [
       ></v-app-bar-nav-icon>
     </template>
 
-    <v-app-bar-title class="font-weight-bold"> Ben's Portfolio </v-app-bar-title>
+    <v-app-bar-title class="font-weight-bold cursor-pointer" @click="navigate">
+      Ben's Portfolio
+    </v-app-bar-title>
 
     <v-spacer></v-spacer>
 
