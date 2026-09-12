@@ -88,6 +88,9 @@
 .max-width-70 {
   max-width: 70%;
 }
+.text-bold {
+  font-weight: 900;
+}
 .box {
   border: 1px solid black;
   display: flex;
