@@ -32,12 +32,25 @@
           {{ author?.role }}
         </v-sheet>
         <v-sheet class="ma-2 pa-2 text-h7"> {{ author?.desc }} </v-sheet>
-        <v-sheet class="ma-2 pa-2">Phone Number: {{ author?.number }}</v-sheet>
-        <v-sheet class="ma-2 pa-2">Email: {{ author?.email }}</v-sheet>
-        <v-sheet class="ma-2 pa-2">Country: {{ author?.country }}</v-sheet>
-        <v-sheet class="ma-2 pa-2">Language: {{ author?.language }}</v-sheet>
         <v-sheet class="ma-2 pa-2"
-          >Open To Hire: {{ author?.available }}</v-sheet
+          ><span class="text-bold font-extrabold">Phone Number</span>:
+          {{ author?.number }}</v-sheet
+        >
+        <v-sheet class="ma-2 pa-2"
+          ><span class="text-bold font-extrabold">Email</span>:
+          {{ author?.email }}</v-sheet
+        >
+        <v-sheet class="ma-2 pa-2"
+          ><span class="text-bold font-extrabold">Country</span>:
+          {{ author?.country }}</v-sheet
+        >
+        <v-sheet class="ma-2 pa-2"
+          ><span class="text-bold font-extrabold">Language</span>:
+          {{ author?.language }}</v-sheet
+        >
+        <v-sheet class="ma-2 pa-2"
+          ><span class="text-bold font-extrabold">Open To Hire</span>:
+          {{ author?.available }}</v-sheet
         >
         <div class="mx-3">
           <v-btn rounded variant="outlined" @click="download">View CV</v-btn>

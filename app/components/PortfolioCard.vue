@@ -3,7 +3,13 @@
     class="position-relative pointer appear-on-hover-container my-3"
     @click="navigate"
   >
-    <v-img :lazy-src="image" class="responsive position-relative" :src="image">
+    <v-img
+      :lazy-src="image"
+      loading="lazy"
+      :alt="title"
+      class="responsive position-relative"
+      :src="image"
+    >
       <template v-slot:placeholder>
         <v-row align="center" class="fill-height ma-0" justify="center">
           <v-progress-circular
@@ -18,6 +24,7 @@
         <img
           src="https://img.icons8.com/?size=100&id=7695&format=png&color=000000"
           class="overlay centered-icon"
+          loading="lazy"
         />
         <p class="text-black text-h5 overlay bottom-0 mb-5">
           {{ title }}

@@ -80,5 +80,50 @@ export default defineEventHandler(async () => {
       name: "GraphQL",
       expertise: 80,
     },
+    {
+      icon: "https://img.icons8.com/color/48/python--v1.png",
+      name: "Python",
+      expertise: 50,
+    },
+    {
+      icon: "https://img.icons8.com/windows/32/nodejs.png",
+      name: "NodeJS",
+      expertise: 80,
+    },
+    {
+      icon: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*gMiUPuRGC36nxZHe2zthOg.png",
+      name: "Playwright",
+      expertise: 40,
+    },
+    {
+      icon: "https://logowik.com/content/uploads/images/vitest-testing-framework8886.logowik.com.webp",
+      name: "Vitest",
+      expertise: 70,
+    },
+    {
+      icon: "https://icon.icepanel.io/Technology/svg/Jest.svg",
+      name: "Jest",
+      expertise: 40,
+    },
+    {
+      icon: "https://www.lastingdynamics.com/wp-content/uploads/2025/07/React-Testing-Library.svg",
+      name: "React Testing Library",
+      expertise: 40,
+    },
+    {
+      icon: "https://avatars.githubusercontent.com/u/2092016?s=280&v=4",
+      name: "XUnit",
+      expertise: 60,
+    },
+    {
+      icon: "https://upload.wikimedia.org/wikipedia/commons/e/ef/K6-logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      name: "K6",
+      expertise: 60,
+    },
+    {
+      icon: "https://images.seeklogo.com/logo-png/38/1/jmeter-logo-png_seeklogo-388141.png",
+      name: "Apache JMeter",
+      expertise: 40,
+    },
   ];
 });
